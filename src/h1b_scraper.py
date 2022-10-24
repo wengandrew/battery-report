@@ -2,14 +2,24 @@ from bs4 import BeautifulSoup
 import requests
 import csv
 from os.path import exists
-import time
+from datetime import datetime
 
-def search(company, job, city, year, t):
-    url = "https://h1bdata.info/index.php?em={}&job={}&city={}&year={}".format(company, job, city, str(year))
-    print("Fetching Data from: " + url)
+# Define constants
+filepath_company_list = 'resources/company_list.csv'
+
+
+def find_and_write(company, output_file, job='', 
+                                         city='', 
+                                         year=''):
+
+
+    # Find the requested content
+    url = f"https://h1bdata.info/index.php?em={company}&job={job}&city={city}&year={year}"
+
     page = requests.get(url)
     soup = BeautifulSoup(page.content, "lxml")
     data = []
+
     for tr in soup.find_all("tr"):
         row = []
         for td in tr.find_all("td"):
@@ -17,33 +27,45 @@ def search(company, job, city, year, t):
         if "".join(row).strip():
             data.append(row)
 
-    output_file = "output-"+str(t)+".csv"
-    print("Writing " + str(len(data)) + " Entries out to: " + output_file)
+    print(f'{company}: {len(data)} entries found')
+
     file_exists = exists(output_file)
+
+    # Write into file
     with open(output_file, "a+") as f:
+
         writer = csv.writer(f)
+
         if not file_exists:
-            writer.writerow(["company", "title", "salary", "location", "submit date", "start date"])
+
+            writer.writerow(["company", 
+                             "title", 
+                             "salary", 
+                             "location", 
+                             "submit date", 
+                             "start date"])
+
         writer.writerows(data)
-    print("Done.")
+
     return len(data)
-jobs = ['Battery', 'Vehicle', 'Chemist', 'Material']
-city = {'Panasonic Corporation Of North America': 'Sparks, NV' }
 
-with open('companies.csv') as csvfile:
-    t= time.time()
-    creader = csv.reader(csvfile)
-    i =0
-    total = 0
-    for row in creader:
-        i += 1
-        comp = row[0]
-        for job in jobs:
-            ci = ''
-            if comp in city:
-                ci = city[comp]
-            total += search(comp, job, ci, '', t)
-    print('processed:' + str(i) + " companies.")
-    print('found:' + str(total) + " job postings.")
 
-#search('Tesla', '', '', 2021)
+if __name__ == '__main__':
+
+    jobs = ['Battery', 'Vehicle', 'Chemist', 'Material', 'Process', 'Cell']
+    curr_time = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
+    output_file = f'output/output-{curr_time}.csv'
+
+    print(f'Writing into {output_file}...\n')
+
+    with open(filepath_company_list) as csvfile:
+
+        creader = csv.reader(csvfile)
+        total = 0
+
+        for i, row in enumerate(creader):
+
+            company = row[0]
+            total += find_and_write(company, output_file)
+
+        print(f'Finished processing {i} companies with {total} total job postings.')
