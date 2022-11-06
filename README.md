@@ -4,3 +4,5 @@ Code and scripts used to generate data and analysis for 'Talent' section of The 
 
 Contributors:
 - Andrew Weng
+- Linda Jing
+- Gabe Hege

@@ -1,0 +1,66 @@
+---
+C-Suite:
+  incl:
+    - chief technology officer
+    - chief brand officer
+    - chief marketing officer
+    - chief executive officer
+    - chief strategy officer
+    - chief financial officer
+  excl:
+    - ''
+
+Director:
+  incl:
+    - director
+    - vice president
+    - vp of
+  excl:
+    - ''
+
+Manager:
+  incl:
+    - manager
+    - senior manager
+    - sr. manager
+    - sr manager
+  excl:
+    - program manager
+    - project manager
+    - global supply manager
+    - product manager
+    - strategy manager
+    - sourcing manager
+    - supply chain manager
+    - distribution manager
+    - it manager
+    - supervisor
+
+Staff:
+  incl:
+    - staff
+    - chief
+    - principal
+    - lead
+    - engineer iv
+  excl:
+    - member of
+    - chief of staff
+
+Senior:
+  incl:
+    - senior
+    - senior associate
+    - sr.
+    - sr
+    - engineer iii
+    - engineer ii
+  excl:
+    - ''
+
+Junior:
+  incl:
+    - associate
+    - junior
+  excl:
+    - ''

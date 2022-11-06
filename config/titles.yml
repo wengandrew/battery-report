@@ -1,0 +1,240 @@
+# Titles take ascending precedent
+---
+Battery General:
+  incl:
+    - battery
+    - cell
+    - bms
+    - charging
+    - battery management systems
+    - cathode
+    - materials
+    - formation
+    - module
+    - lithium
+  excl:
+    - materials planner
+    - material planner
+    - plant materials
+
+PM:
+  incl:
+    - product manager
+    - project manager
+    - program manager
+    - coordinator
+    - product owner
+    - product design
+  excl:
+    - ''
+
+Business:
+  incl:
+    - business
+    - supply chain
+    - financ
+    - global supply
+    - buyer
+    - purchas
+    - chief of staff
+    - market
+    - risk
+    - hr partner
+    - hr operations
+    - strategic
+    - sales
+    - sourcing
+    - recruiter
+    - talent
+    - strategy
+    - procure
+  excl:
+    - ''
+
+
+Software:
+  incl:
+    - software
+    - artificial intelligence
+    - data
+    - stack
+    - algorithm
+    - programmer
+    - ai scientist
+    - devops
+    - machine learning
+    - computer
+    - deep learning
+    - user experience
+    - ux
+    - self-driving
+    - comptat
+    - ai ml
+    - ai-ml
+    - modeling
+    - lifetime
+    - predict
+    - simulation
+    - devops
+    - dev ops
+    - cloud
+    - platform
+    - web
+    - network
+    - digital
+    - automat
+    - java
+    - user interface
+    - model
+    - hadoop
+    - vision
+    - android
+  excl:
+    - ''
+
+
+Vehicle:
+  incl:
+    - vehicle
+    - powertrain
+    - automotive
+    - body
+    - chasis
+    - dynamics
+    - harness
+    - chassis
+    - infotainment
+    - motor
+    - assembly
+    - combustion
+    - nvh
+    - homologation
+    - crash
+    - closure
+    - exterior
+    - interior
+    - brake
+    - transmission
+  excl:
+    - ''
+
+
+Safety/Thermal:
+  incl:
+    - abuse
+    - safety
+    - thermal
+    - failure
+    - reliab
+    - heat
+    - durability
+  excl:
+    - ''
+
+
+Research:
+  incl:
+    - research
+    - r&d
+    - scientist
+    - chemist
+  excl:
+    - research analyst
+
+
+Test/QA:
+  incl:
+    - validation
+    - test
+    - quality
+    - qa
+    - characterization
+    - application
+    - stress
+    - verification
+  excl:
+    - ''
+
+Manufacturing:
+  incl:
+    - manufactur
+    - process
+    - body in white
+    - development
+    - industrial
+    - dfm
+    - stamping
+    - paint
+    - architectur
+  excl:
+    - ''
+
+Mechanical:
+  incl:
+    - mechanical
+    - cad
+    - aerody
+    - aeroacoustics
+    - finite element analysis
+    - cae
+    - cfd
+    - catia
+    - dimensional
+    - fea
+    - acoustic
+    - equipment engineer
+    - equipment design
+    - aircraft
+    - module
+    - design and release
+    - design release
+  excl:
+    - ''
+
+
+Electrical:
+  incl:
+    - electric
+    - control
+    - system
+    - hardware in the loop
+    - hil
+    - electromagnetic
+    - bluetooth
+    - antenna
+    - bms
+    - firmware
+    - electronic
+    - embedded
+    - sensor
+    - perception
+    - pcb
+  excl:
+    - ''
+
+General:
+  incl:
+    - principal engineer
+    - associate engineer
+    - technical staff
+    - senior engineer
+    - product engineer
+    - chief engineer
+    - civil engineer
+    - staff engineer
+    - engineering manager
+    - project lead
+    - technical lead
+    - project engineer
+    - sr. engineer
+    - plm
+    - product lifecycle management
+    - requirement
+    - release
+    - cost
+    - engineer
+    - engineer i
+    - engineer ii
+    - engineer iii
+  excl:
+    - ''
