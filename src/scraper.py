@@ -13,7 +13,7 @@ from os.path import exists
 import time
 
 COMPANIES_FILE = 'config/company_list_all.csv'
-OUTPUT_FILE = 'output/output_raw.csv'
+OUTPUT_FILE = 'data/data_h1binfo_export.csv'
 
 def search(company, job, city, year, t):
 

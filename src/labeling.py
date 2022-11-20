@@ -10,8 +10,8 @@ Original code from Linda Jing.
 import yaml
 import pandas as pd
 
-PATH_IN = "output/output_raw.csv"
-PATH_OUT = "output/output_processed.csv"
+PATH_IN = "data/data_h1binfo_export.csv"
+PATH_OUT = "data/data_processed.csv"
 
 PATH_CONFIG_TITLES = 'config/titles.yml'
 PATH_CONFIG_LEVELS = 'config/levels.yml'
