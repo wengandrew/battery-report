@@ -1,5 +1,7 @@
 
-# https://www.usinflationcalculator.com/inflation/consumer-price-index-and-annual-percent-changes-from-1913-to-2008/
+# Consumer Price Index
+# Used to calculate inflation-adjusted salaries
+# Source: https://www.usinflationcalculator.com/inflation/consumer-price-index-and-annual-percent-changes-from-1913-to-2008/
 # By default, use CPI from December
 ---
 current_cpi: 296.808
