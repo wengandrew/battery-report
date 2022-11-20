@@ -1,4 +1,10 @@
-# Titles take ascending precedent
+# Job titles for filtering
+# `incl` - list of keywords to include
+# `excl` - list of keywords to exclude
+# Titles are assigned in order of descending precedent, 
+# i.e. if 'battery' appears above 'electrical', then all 
+# titles including both keywords will be counted under 
+# "Battery General"
 ---
 Battery General:
   incl:
