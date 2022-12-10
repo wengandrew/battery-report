@@ -25,7 +25,7 @@ def calculate_fraction_of_jobs_with_battery_in_title():
 
     # Define criteria for a job title to explicitly contain battery-related
     # keywords
-    match = lambda x: len(re.findall(r'battery|cell|bms|module', x)) >= 1
+    match = lambda x: len(re.findall(r'battery|cell|module', x)) >= 1
 
     # Count the number of jobs with battery-related keywords
     num_jobs_with_battery_terms = np.sum([match(x.lower()) for x in
