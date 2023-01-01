@@ -51,6 +51,7 @@ def search(company, job, city, year, t):
         writer.writerows(data)
 
     print("Done.")
+    print(" ")
 
     return len(data)
 

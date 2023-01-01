@@ -22,6 +22,9 @@ def main():
 
     # Prepare and load dataframe
     df = pd.read_csv(PATH_IN)
+
+    # Drop rows having null titles
+    df.drop(labels=df[df['title'].isnull()].index, inplace=True)
     df['year'] = pd.DatetimeIndex(df['start date']).year
     df['salary'] = df["salary"].str.replace(",","").astype(float)
     df['salary_normalized'] = None
