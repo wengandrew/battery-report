@@ -4,9 +4,9 @@
 # Source: https://www.usinflationcalculator.com/inflation/consumer-price-index-and-annual-percent-changes-from-1913-to-2008/
 # By default, use CPI from December
 ---
-current_cpi: 296.808
+current_cpi: 297.711
 cpi_dict:
-  2022: 296.808 # CPI from september
+  2022: 297.711 # CPI from November 2022
   2021: 277.948
   2020: 260.474
   2019: 256.974
