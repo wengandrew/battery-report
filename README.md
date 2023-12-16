@@ -11,11 +11,13 @@ Contributors:
 
 ## To regenerate the dataset...
 
-First run `src/scraper.py`, starting from the home directory. This will scrape the
+1. Configure and activate your virtual environment. Install the packages from `requirements.txt`.
+
+2. Run `src/scraper.py`, starting from the home directory. This will scrape the
 web for H1-B data and export it into a file called
 `data/data_h1binfo_export.csv`.
 
-Then run `src/labeling.py`. This will return another file called
+3. Run `src/labeling.py`. This will return another file called
 `data/data_processed.csv` which contains a cleaned up version of the data
 including inflation-adjusted salaries and job category labels.
 

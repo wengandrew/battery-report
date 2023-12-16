@@ -16,7 +16,7 @@ PATH_OUT = "data/data_processed.csv"
 PATH_CONFIG_TITLES = 'config/titles.yml'
 PATH_CONFIG_LEVELS = 'config/levels.yml'
 PATH_CONFIG_CPI    = 'config/cpi.yml'
-PATH_CONFIG_RELEVANT_COMPANIES = 'config/company_list_relevant.csv'
+PATH_CONFIG_RELEVANT_COMPANIES = 'config/company_list.csv'
 
 def main():
 
@@ -52,7 +52,9 @@ def main():
 def label_relevance(df):
 
     # convert company csv to list
-    company_list_df = pd.read_csv(PATH_CONFIG_RELEVANT_COMPANIES)
+    company_list_df = pd.read_csv(PATH_CONFIG_RELEVANT_COMPANIES)\
+                        .apply(lambda x: x.str.strip() if x.dtype == "object" else x)\
+                        .rename(columns=lambda x: x.strip())
     company_list = company_list_df['Company'].to_list()
     company_list = [x.upper() for x in company_list]
 

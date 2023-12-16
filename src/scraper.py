@@ -12,7 +12,7 @@ import csv
 from os.path import exists
 import time
 
-COMPANIES_FILE = 'config/company_list_all.csv'
+COMPANIES_FILE = 'config/company_list.csv'
 OUTPUT_FILE = 'data/data_h1binfo_export.csv'
 
 def search(company, job, city, year, t):
@@ -68,7 +68,7 @@ if __name__ == "__main__":
         for row in creader:
 
             i += 1
-            comp = row[0]
+            comp = row[0].strip()
 
             total += search(comp, '', '', '', t)
 
