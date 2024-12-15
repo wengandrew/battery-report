@@ -26,23 +26,27 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-3. Run `src/scraper.py`. This will scrape the
-web for H1-B data and export it into a file called
-`data/data_h1binfo_export.csv`.
+3. Run `src/scraper.py`.
 
 ```
 python src/scraper.py
 ```
+This will scrape the web for H1-B data and export it into a file called
+`data/data_h1binfo_export.csv`.
 
-4. Run `src/labeling.py`. This will return another file called
-`data/data_processed.csv` which contains a cleaned up version of the data
-including inflation-adjusted salaries and job category labels.
+
+4. Run `src/labeling.py`.
 
 ```
 python src/labeling.py
 ```
 
+This will return another file called
+`data/data_processed.csv` which contains a cleaned up version of the data
+including inflation-adjusted salaries and job category labels.
+
 ## To visualize the results...
 
-Then visualize the data using `tableau/jobs.twb`. Tableau is required to view
-the data.
+We have been using Tableau to view the data.
+
+For example, see `output/battery-report-2024/jobs.twb.'
